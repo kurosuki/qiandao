@@ -25,7 +25,7 @@ logger.addHandler(ch)
 
 def get_refresh_url(url: str):
     try:
-        response = requests.get(url, verify='/path/to/custom/cert.pem')
+        response = requests.get(url)
         if response.status_code != 403:
             response.raise_for_status()
 
